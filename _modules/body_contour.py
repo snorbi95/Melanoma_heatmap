@@ -85,9 +85,10 @@ def get_body_contour(image_path, mid_point = None):
         mid_point = (mid_point[0], mid_point[1])
         # print(mid_point)
         # print(res_image.shape)
+        plt.imsave(f'_images/body_contour_images/blank_contours/{image_path.split("/")[-1]}', res_image)
         res_image = cv2.circle(res_image, mid_point, 25, (1, 0, 0), -1)
     #plt.savefig(f'body_contour_images/{image_path.split("/")[1]}')
-    plt.imsave(f'../_images/body_contour_images/{image_path.split("/")[-1]}', res_image)
+    plt.imsave(f'_images/body_contour_images/{image_path.split("/")[-1]}', res_image)
     #plt.clf()
 
 # file_path = f'../_images/body_images_resized'
