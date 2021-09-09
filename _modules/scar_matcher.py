@@ -9,18 +9,6 @@ import body_contour as bc
 
 MIN_MATCH_COUNT = 35
 
-# parser = argparse.ArgumentParser(description='Template matcher')
-# parser.add_argument('--template', type=str, action='store',
-#                     help='The image to be used as template')
-# parser.add_argument('--map', type=str, action='store',
-#                     help='The image to be searched in')
-# parser.add_argument('--show', action='store_true',
-#                     help='Shows result image')
-# parser.add_argument('--save-dir', type=str, default='./',
-#                     help='Directory in which you desire to save the result image')
-#
-# args = parser.parse_args()
-
 current_image_name = ''
 mid_point_ratio = 0
 
