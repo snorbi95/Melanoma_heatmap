@@ -43,7 +43,7 @@ if __name__ == "__main__":
     from os import listdir
     from os.path import isfile, join
 
-    body_part = 'back'
+    body_part = 'chest'
     reference_image_path = f'_images/reference_body_images/{body_part}.jpg'
     contour_images = [f for f in listdir(f'_images/body_contour_images/{body_part}') if isfile(join(f'_images/body_contour_images/{body_part}', f))]
     print(len(contour_images))
@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
         right_side_img = np.flip(adjust_image_to_reference(rotated_moving_image, rotated_subtracted_image), axis = 1)
 
-        inverted_reference_image[contour_with_point_image == 76] += 20
+        inverted_reference_image[(contour_with_point_image > 70) & (contour_with_point_image < 80)] += 40
 
         # fig, ax = plt.subplots(1,2)
         # ax[0].imshow(rotated_subtracted_image)
